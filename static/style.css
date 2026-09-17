@@ -206,7 +206,7 @@ p {
   background-size: auto 96px;
   border-radius: 1rem 1rem 0 0;    /* match the card's rounded top corners */
   pointer-events: none;            /* never blocks clicks on links */
-  animation: bob 4s ease-in-out infinite;
+  animation: bob 2s ease-in-out infinite;
 }
 
 .sidebar.left::before  { animation-delay: 0s; }
