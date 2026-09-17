@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* centers the whole 3-column group horizontally */
+  align-items: flex-start;   /* or "center" if you want vertical centering too */
+  background: #fce4ec;
+  font-family: "basiic";
+  font-size: 15px;
+}
+
+.page-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  max-width: 1000px;   /* caps how wide the whole group can get */
+  width: 100%;
+  padding: 2rem;
+}
+
+.sidebar {
+  flex: 0 0 200px;      /* fixed width, won't grow or shrink */
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;              /* new */
+  flex-direction: column;     /* new */
+  min-height: 100%;
+}
+
+.content {
+  flex: 1;               /* takes remaining space in the middle */
+  max-width: 400px;      /* optional: stop it getting too wide */
+  background: #fff;
+  padding: 1.5rem;
+  flex: 0 0 500px;
+  border-radius: 1rem;
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > a {
+  padding: 0 5px 5px 0;
+  font-family: "glamourgirl";
+  color: #c2255c;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav > a:hover {
+  color: #97193f;
+}
+
+.wave-item {
+  display: inline-block;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.wave-item:nth-child(1) { animation-delay: 0s; }
+.wave-item:nth-child(2) { animation-delay: 0.3s; }
+.wave-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: "glamourgirl";
+  src: url("/static/Cherrybomb.ttf");
+}
+
+@font-face {
+  font-family: "basiic";
+  src: url("/static/basiic.ttf");
+}
+
+.gg {
+  font-family: "glamourgirl";
+}
+
+.pink {
+  color: #c2255c;
+}
+
+a {
+  color: #c2255c;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+a:hover {
+  color: #97193f;
+}
+
+a:visited {
+  color: #ad3b72;
+}
+
+ul {
+  padding:  0;
+  list-style-type: none;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+.minis {
+  margin-top: auto;
+  padding-top: 0;
+  display: flex;
+}
