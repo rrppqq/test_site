@@ -62,16 +62,16 @@ nav > a {
 nav > a:hover {
   color: #97193f;
 }
+/*
 
 .wave-item {
   display: inline-block;
   animation: bob 2s ease-in-out infinite;
 }
-
 .wave-item:nth-child(1) { animation-delay: 0s; }
 .wave-item:nth-child(2) { animation-delay: 0.2s; }
 .wave-item:nth-child(3) { animation-delay: 0.4s; }
-
+*/
 @keyframes bob {
   0%, 100% {
     transform: translateY(0px);
@@ -184,3 +184,52 @@ p {
 .stamps img {
   margin: 10px;
 }
+
+
+/* SPECIAL STUFF */
+/* ===== Wavy dark-pink tops ===== */
+
+.sidebar, .content {
+  overflow: hidden;
+  position: relative;              /* anchor for the wave layer */
+}
+
+.sidebar::before,
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 96px;                    /* how tall the pink area is */
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'><rect width='60' height='13' fill='%23d6336c'/><g fill='%23d6336c'><circle cx='0' cy='13' r='4.2'/><circle cx='6' cy='13' r='3.6'/><circle cx='12' cy='13' r='4.2'/><circle cx='18' cy='13' r='3.6'/><circle cx='24' cy='13' r='4.2'/><circle cx='30' cy='13' r='3.6'/><circle cx='36' cy='13' r='4.2'/><circle cx='42' cy='13' r='3.6'/><circle cx='48' cy='13' r='4.2'/><circle cx='54' cy='13' r='3.6'/><circle cx='60' cy='13' r='4.2'/></g></svg>");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: auto 96px;
+  border-radius: 1rem 1rem 0 0;    /* match the card's rounded top corners */
+  pointer-events: none;            /* never blocks clicks on links */
+  animation: bob 4s ease-in-out infinite;
+}
+
+.sidebar.left::before  { animation-delay: 0s; }
+.content::before       { animation-delay: 0.2s; }
+.sidebar.right::before { animation-delay: 0.4s; }
+
+/* keep card content above the wave */
+.sidebar > *, .content > * {
+  position: relative;
+}
+
+/* ---- text inside the wave ---- */
+.sidebar h3:first-of-type {        /* "Socials <3" and "Updates!" */
+  color: #fff;
+}
+.content nav > a {                 /* navbar */
+  color: #fff;
+}
+.content nav > a:hover   { color: #ffd6e7; }
+.content nav > a:visited { color: #ffe3ec; }
+
+.under-cloud {
+  margin-top: 40px;
+}
+
+

@@ -8,7 +8,9 @@
 
     <aside class="sidebar left">
       <h3>Socials <3</h3>
-      <ul>
+      </br>
+      </br>
+      <ul class="under-cloud">
         <li><a target="_blank" href="https://www.instagram.com/p3trichor0us.ahn/">Instagram</a></li>
         <li><a target="_blank" href="https://youtube.com/channel/UCBLrP4cpRs-6i3CQg3NV19w">YouTube</a></li>
         <li><a target="_blank" href="https://www.tiktok.com/@ahn_log">TikTok</a></li>
@@ -33,10 +35,12 @@
 
     <main class="content">
       <nav>
-        <a href="#" class="wave-item">Home</a>
-        <a href="#" class="wave-item">Posts</a>
-        <a href="#" class="wave-item">Refs</a>
+        <a href="#" >Home</a>
+        <a href="#" >Posts</a>
+        <a href="#" >Refs</a>
       </nav>
+      </br>
+      </br>
       <img src="static/divider.gif">
       </br>
       <p>Welcome to my Orbit!</p>
@@ -55,7 +59,7 @@
 
     <aside class="sidebar right">
       <h3>Updates!</h3>
-      <ul>
+      <ul class="under-cloud">
         <li><a href="https://youtu.be/fOxz2q2tdLw">[Sep 17, 2026] Created Website!</a></li>
         <li><a href="https://youtu.be/fOxz2q2tdLw">[Jul 21, 2026] New Upload on YT</a></li>
       </ul>
@@ -73,7 +77,7 @@
       </div>
     </aside>
   </div>
-  <audio id="bg-audio" src="static/your-song.mp3" loop></audio>
+  <audio id="bg-audio" src="static/Tantal_Night_Xenoblade_Chronicles_2.mp3" loop></audio>
   <script>
     const btn = document.getElementById('cd-button');
     const cd_disc = document.getElementById('cd-disc');
@@ -86,7 +90,7 @@
       if (audio.paused) {
         cd_disc.classList.add('cd-disk-active')
         audio.play();
-        song_name.innerHTML = "THIS COOL SONG";
+        song_name.innerHTML = "Tantal - Night - Xenoblade Chronicles 2";
         btn.setAttribute('aria-pressed', 'true');
         btn.setAttribute('aria-label', 'Pause music');
       } else {
