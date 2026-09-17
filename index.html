@@ -9,18 +9,18 @@
     <aside class="sidebar left">
       <h3>Socials <3</h3>
       <ul>
-        <li><a href="https://www.instagram.com/p3trichor0us.ahn/">Instagram</a></li>
-        <li><a href="https://youtube.com/channel/UCBLrP4cpRs-6i3CQg3NV19w">YouTube</a></li>
-        <li><a href="https://www.tiktok.com/@ahn_log">TikTok</a></li>
-        <li><a href="https://pin.it/2scJ7pfUi">Pinterest</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/p3trichor0us.ahn/">Instagram</a></li>
+        <li><a target="_blank" href="https://youtube.com/channel/UCBLrP4cpRs-6i3CQg3NV19w">YouTube</a></li>
+        <li><a target="_blank" href="https://www.tiktok.com/@ahn_log">TikTok</a></li>
+        <li><a target="_blank" href="https://pin.it/2scJ7pfUi">Pinterest</a></li>
       </ul>
       <div class="minis">
-        <img src="https://artwork.neocities.org/pixels/tiny/sanrio/3298122bdfhceio7w.gif"/>
-        <img src="https://artwork.neocities.org/pixels/256654.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/sanrio/43bf2f59b977ed2acaeb891e28a4d10d48d4d9af.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/animals/bird/tumblr_28cb43986ad1fe7f487e6caad1f90398_f4cba076_75.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/animals/rodent/tumblr_inline_p9d0wlHtjo1s6uj4o_75sq.gif"/>
-        <img src="https://artwork.neocities.org/pixels/092.gif"/>
+        <img src="static/minis/3298122bdfhceio7w.gif"/>
+        <img src="static/minis/256654.gif"/>
+        <img src="static/minis/43bf2f59b977ed2acaeb891e28a4d10d48d4d9af.gif"/>
+        <img src="static/minis/tumblr_28cb43986ad1fe7f487e6caad1f90398_f4cba076_75.gif"/>
+        <img src="static/minis/tumblr_inline_p9d0wlHtjo1s6uj4o_75sq.gif"/>
+        <img src="static/minis/092.gif"/>
       </div>
     </aside>
 
@@ -44,17 +44,41 @@
         <li><a href="https://youtu.be/fOxz2q2tdLw">[Jul 21, 2026] New Upload on YT</a></li>
       </ul>
       <div class="minis">
-        <img src="https://artwork.neocities.org/pixels/tiny/animals/water/ArutP9J.gif"/>
-        <img src="https://artwork.neocities.org/pixels/32879.gif"/>
-        <img src="https://artwork.neocities.org/pixels/9.gif"/>
-        <img src="https://artwork.neocities.org/photos/autumn/tumblr_a967a61439026fe561892d8ecd8fb4ab_914afcb9_75.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/sanrio/2010041419201814d.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/cartoons/1156073.gif"/>
-        <img src="https://artwork.neocities.org/pixels/tiny/animals/rodent/41810228.gif"/>
+        <img src="static/minis/ArutP9J.gif"/>
+        <img src="static/minis/32879.gif"/>
+        <img src="static/minis/9.gif"/>
+        <img src="static/minis/tumblr_a967a61439026fe561892d8ecd8fb4ab_914afcb9_75.gif"/>
+        <img src="static/minis/2010041419201814d.gif"/>
+        <img src="static/minis/1156073.gif"/>
+        <img src="static/minis/41810228.gif"/>
       </div>
     </aside>
   </div>
-</body>
+  <button id="disc-player" class="disc-player" aria-label="Play music" aria-pressed="false">
+    <img class="disc-player-img"  src="static/cd_static.png" alt="">
+  </button>
+  <audio id="bg-audio" src="static/your-song.mp3" loop></audio>
+  <script>
+    const btn = document.getElementById('disc-player');
+    const audio = document.getElementById('bg-audio');
+    audio.volume = 0.1;
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        btn.children[0].src = "static/cd.gif";
+        audio.play();
+        btn.classList.add('playing');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.setAttribute('aria-label', 'Pause music');
+      } else {
+        btn.children[0].src = "static/cd_static.png";
+        audio.pause();
+        btn.classList.remove('playing');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.setAttribute('aria-label', 'Play music');
+      }
+    });
+  </script>
 </body>
 </head>
 
