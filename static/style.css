@@ -82,12 +82,12 @@ img {
 
 @font-face {
   font-family: "glamourgirl";
-  src: url("/static/Cherrybomb.ttf");
+  src: url("static/Cherrybomb.ttf");
 }
 
 @font-face {
   font-family: "basiic";
-  src: url("/static/basiic.ttf");
+  src: url("static/basiic.ttf");
 }
 
 .gg {
