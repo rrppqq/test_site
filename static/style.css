@@ -21,11 +21,18 @@ body {
   padding: 2rem;
 }
 
+.left {
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.right {
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
 .sidebar {
   flex: 0 0 200px;      /* fixed width, won't grow or shrink */
   background: #fff;
   padding: 1rem;
-  border-radius: 1rem;
   border: 1px solid #f8bbd0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   display: flex;              /* new */
@@ -39,7 +46,7 @@ body {
   background: #fff;
   padding: 1.5rem;
   flex: 0 0 500px;
-  border-radius: 1rem;
+  border-radius: 0rem 0rem 0rem 0rem;
   border: 1px solid #f8bbd0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -202,7 +209,7 @@ p {
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: auto 96px;
-  border-radius: 1rem 1rem 0 0;    /* match the card's rounded top corners */
+  border-radius: 0rem 0rem 0 0;    /* match the card's rounded top corners */
   pointer-events: none;            /* never blocks clicks on links */
   animation: bob 2s ease-in-out infinite;
 }
