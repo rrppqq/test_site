@@ -35,7 +35,7 @@ body {
 
 .content {
   flex: 1;               /* takes remaining space in the middle */
-  max-width: 400px;      /* optional: stop it getting too wide */
+  max-width: 600px;      /* optional: stop it getting too wide */
   background: #fff;
   padding: 1.5rem;
   flex: 0 0 500px;
