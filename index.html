@@ -14,6 +14,13 @@
         <li><a target="_blank" href="https://www.tiktok.com/@ahn_log">TikTok</a></li>
         <li><a target="_blank" href="https://pin.it/2scJ7pfUi">Pinterest</a></li>
       </ul>
+      <h3>CD Player</h3>
+      <p>Press to Insert/Remove Disc!<p>
+      <button id="cd-button">
+        <span><img id="cd-disc" height=25px width=25px  src="static/cd.gif" alt=""></span>
+        <span><img id="cd-player" height=30px width=30px  src="static/cd_player.gif" alt=""></span>
+      </button>
+      <p>Now Playing: <span id="song-name" class="pink">Zzz...</span></p>
       <div class="minis">
         <img src="static/minis/3298122bdfhceio7w.gif"/>
         <img src="static/minis/256654.gif"/>
@@ -54,27 +61,27 @@
       </div>
     </aside>
   </div>
-  <button id="disc-player" class="disc-player" aria-label="Play music" aria-pressed="false">
-    <img class="disc-player-img"  src="static/cd_static.png" alt="">
-  </button>
   <audio id="bg-audio" src="static/your-song.mp3" loop></audio>
   <script>
-    const btn = document.getElementById('disc-player');
+    const btn = document.getElementById('cd-button');
+    const cd_disc = document.getElementById('cd-disc');
+    const song_name = document.getElementById('song-name');
     const audio = document.getElementById('bg-audio');
     audio.volume = 0.1;
 
     btn.addEventListener('click', () => {
+      console.log("CLICKED");
       if (audio.paused) {
-        btn.children[0].src = "static/cd.gif";
+        cd_disc.classList.add('cd-disk-active')
         audio.play();
-        btn.classList.add('playing');
+        song_name.innerHTML = "THIS COOL SONG";
         btn.setAttribute('aria-pressed', 'true');
         btn.setAttribute('aria-label', 'Pause music');
       } else {
-        btn.children[0].src = "static/cd_static.png";
+        cd_disc.classList.remove('cd-disk-active')
         audio.pause();
-        btn.classList.remove('playing');
         btn.setAttribute('aria-pressed', 'false');
+        song_name.innerHTML = "Zzzz...";
         btn.setAttribute('aria-label', 'Play music');
       }
     });
