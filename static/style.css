@@ -141,6 +141,11 @@ li {
 */
   display: flex;
   justify-content: center;
+  padding: 5px;
+  border-radius: 0px;
+  background: #fce4ec;
+  border: 1px solid;
+  border-color: black;
   width: 100%;
 }
 
