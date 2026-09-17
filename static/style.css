@@ -52,7 +52,7 @@ nav {
 }
 
 nav > a {
-  padding: 0 5px 5px 0;
+  padding: 0 10px 0px 10px;
   font-family: "cherrybomb";
   color: #c2255c;
   text-decoration: none;
