@@ -8,10 +8,11 @@ body {
   display: flex;
   justify-content: center;   /* centers the whole 3-column group horizontally */
   align-items: flex-start;   /* or "center" if you want vertical centering too */
-  /* background: #fce4ec; */
+  background-color: #ffd6e7;      /* pink tint sits behind/blends with the gif */
   background-image: url("ba1.gif");
   background-repeat: repeat;
   background-size: auto;
+  background-blend-mode: multiply; /* darkens the white parts of the gif to pink, keeps the stars visible, and separates it from the white cards */
   font-family: "basiic";
   font-size: 15px;
   background-position: calc(var(--mouse-x, 0) * 20px) calc(var(--mouse-y, 0) * 20px);
@@ -40,10 +41,10 @@ a:hover {
 
 .sidebar {
   flex: 0 0 200px;      /* fixed width, won't grow or shrink */
-  background: #fff;
+  background: #fffafc;
   padding: 1rem;
-  border: 1px solid #f8bbd0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 2px solid #f06292;
+  box-shadow: 0 4px 14px rgba(194, 37, 92, 0.25);
   display: flex;              /* new */
   flex-direction: column;     /* new */
   min-height: 100%;
@@ -52,12 +53,12 @@ a:hover {
 .content {
   flex: 1;               /* takes remaining space in the middle */
   max-width: 500px;      /* optional: stop it getting too wide */
-  background: #fff;
+  background: #fffafc;
   padding: 1.5rem;
   flex: 0 0 500px;
   border-radius: 0rem 0rem 0rem 0rem;
-  border: 1px solid #f8bbd0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 2px solid #f06292;
+  box-shadow: 0 4px 14px rgba(194, 37, 92, 0.25);
 }
 
 nav {
