@@ -18,9 +18,9 @@
         <li><a target="_blank" href="https://pin.it/2scJ7pfUi">Pinterest</a></li>
       </ul>
       <h3>CD Player</h3>
-      <p>Press to Insert/Remove Disc!<p>
+      <p>Press to Insert/Remove Disk!<p>
       <button id="cd-button">
-        <span><img id="cd-disc" height=25px width=25px  src="static/cd.gif" alt=""></span>
+        <span><img id="cd-disk" height=25px width=25px  src="static/cd.gif" alt=""></span>
         <span><img id="cd-player" height=30px width=30px  src="static/cd_player.gif" alt=""></span>
       </button>
       <p>Now Playing: <span id="song-name" class="pink">Zzzz...</span></p>
@@ -77,7 +77,7 @@
   <audio id="bg-audio" src="static/Tantal_Night_Xenoblade_Chronicles_2.mp3" loop></audio>
   <script>
     const btn = document.getElementById('cd-button');
-    const cd_disc = document.getElementById('cd-disc');
+    const cd_disk = document.getElementById('cd-disk');
     const song_name = document.getElementById('song-name');
     const audio = document.getElementById('bg-audio');
     audio.volume = 0.1;
@@ -85,13 +85,13 @@
     btn.addEventListener('click', () => {
       console.log("CLICKED");
       if (audio.paused) {
-        cd_disc.classList.add('cd-disk-active')
+        cd_disk.classList.add('cd-disk-active')
         audio.play();
         song_name.innerHTML = "Tantal - Night - Xenoblade Chronicles 2";
         btn.setAttribute('aria-pressed', 'true');
         btn.setAttribute('aria-label', 'Pause music');
       } else {
-        cd_disc.classList.remove('cd-disk-active')
+        cd_disk.classList.remove('cd-disk-active')
         audio.pause();
         btn.setAttribute('aria-pressed', 'false');
         song_name.innerHTML = "Zzzz...";
