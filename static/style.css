@@ -64,16 +64,16 @@ a:hover {
 nav {
   display: flex;
   padding-bottom: 15px;
-  padding-top: 15px;
+  padding-top: 0px;
   justify-content: center;
 }
 
 nav > a {
   padding: 0 10px 0px 10px;
   font-family: "cherrybomb";
+  font-size: 35px;
   color: #c2255c;
   text-decoration: none;
-  font-size: 15px;
 }
 
 .wave-item {
@@ -99,7 +99,7 @@ img {
 
 @font-face {
   font-family: "cherrybomb";
-  src: url("Cherrybomb.ttf");
+  src: url("poti.ttf");
 }
 
 @font-face {
@@ -115,7 +115,7 @@ img {
   color: #c2255c;
 }
 
-a {
+a, a:visited {
   color: #c2255c;
   text-decoration: underline;
   font-size: 15px;
@@ -123,10 +123,6 @@ a {
 
 a:hover {
   color: #97193f;
-}
-
-a:visited {
-  color: #ad3b72;
 }
 
 ul {
@@ -233,12 +229,11 @@ p {
 .sidebar h3:first-of-type {        /* "Socials <3" and "Updates!" */
   color: #fff;
 }
-.content nav > a {                 /* navbar */
+.content nav > a, nav > a:visited {                 /* navbar */
   color: #fff;
 }
 /* this overrides the generic hover */
 .content nav > a:hover   { color: #ffd6e7; }
-.content nav > a:visited { color: #ffe3ec; }
 
 .under-cloud {
   margin-top: 40px;
