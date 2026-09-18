@@ -43,7 +43,7 @@ a:hover {
   flex: 0 0 200px;      /* fixed width, won't grow or shrink */
   background: #fffafc;
   padding: 1rem;
-  border: 2px solid #f06292;
+  border: 1px solid #f06292;
   box-shadow: 0 4px 14px rgba(194, 37, 92, 0.25);
   display: flex;              /* new */
   flex-direction: column;     /* new */
@@ -57,7 +57,7 @@ a:hover {
   padding: 1.5rem;
   flex: 0 0 500px;
   border-radius: 0rem 0rem 0rem 0rem;
-  border: 2px solid #f06292;
+  border: 1px solid #f06292;
   box-shadow: 0 4px 14px rgba(194, 37, 92, 0.25);
 }
 
