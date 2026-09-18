@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 500px); /* 2 equal rows */
+  gap: 10px; /* optional spacing */
+}
+
+.container img {
+  width: 500px;
+}
