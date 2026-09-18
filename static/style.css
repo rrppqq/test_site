@@ -13,6 +13,10 @@ body {
   font-size: 15px;
 }
 
+a:hover {
+  color: #97193f;
+}
+
 .page-wrapper {
   display: flex;
   gap: 1.5rem;
@@ -64,10 +68,6 @@ nav > a {
   color: #c2255c;
   text-decoration: none;
   font-size: 15px;
-}
-
-nav > a:hover {
-  color: #97193f;
 }
 
 .wave-item {
@@ -230,6 +230,7 @@ p {
 .content nav > a {                 /* navbar */
   color: #fff;
 }
+/* this overrides the generic hover */
 .content nav > a:hover   { color: #ffd6e7; }
 .content nav > a:visited { color: #ffe3ec; }
 
